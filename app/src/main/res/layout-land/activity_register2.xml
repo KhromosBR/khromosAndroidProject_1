@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15"
+        android:layout_margin="30dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/email_field"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:hint="@string/email"
+            android:textAlignment="center"
+            android:background="@color/color3.1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/confirm_email"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:hint="@string/confirm_email"
+            android:textAlignment="center"
+            android:background="@color/color3.1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/password_field"
+            android:hint="@string/password"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:background="@color/color3.1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/confirm_password"
+            android:hint="@string/password"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:background="@color/color3.1"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/secQuestion"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:hint="@string/country"
+            android:background="@color/color3.1"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/answer_secQuestion"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:hint="@string/city"
+            android:background="@color/color3.1"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <Button
+        android:text="@string/sign_in"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_SignIn"
+        android:background="@drawable/curve_background"
+        android:layout_marginLeft="400dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="btn_ToWelcome"
+        android:layout_weight="0.01" />
+
+
+</LinearLayout>

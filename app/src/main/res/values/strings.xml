@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Khromos</string>
+    <!-- Login/Register -->
+    <string name="enter_button">Enter</string>
+    <string name="login">Login/Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="remember_email">Remember Login</string>
+    <string name="register_name">Name</string>
+    <string name="register_secondname">Second name</string>
+    <string name="email">E-mail</string>
+    <string name="confirm_email">Confirm E-mail</string>
+    <string name="male_checkbox">M</string>
+    <string name="female_checkbox">F</string>
+    <string name="birth">Birthday</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="security_question">Security question</string>
+    <string name="add_picture">Profile Picture</string>
+    <string name="button_next">Next</string>
+
+    <!-- Welcome -->
+    <string name="welcome">Welcome to </string>
+    <string name="presentation_skup">
+        Welcome to Khromos. Now you´re able to report all the news you see. Wherever you are, whenever you want. Start sharing what´s happening now! Good luck reporter.
+    </string>
+    <string name="welcome_to_skup">Welcome to Khromos!</string>
+    <string name="slogan">Here, you´re the reporter!</string>
+
+    <!-- Spin itens -->
+
+    <string-array name="spin_country">
+        <item>------</item>
+        <item>Brazil</item>
+        <item>Canada</item>
+        <item>United States</item>
+    </string-array>
+
+    <string-array name="spin_securityquestion">
+        <item>----------------------------------</item>
+        <item>What´s the name of your first pet?</item>
+        <item>What´s the fill name of your mom or dad?</item>
+        <item>What´s your favorite band?</item>
+        <item>What´s your first car?</item>
+    </string-array>
+
+</resources>

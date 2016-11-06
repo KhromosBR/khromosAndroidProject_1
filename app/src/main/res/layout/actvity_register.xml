@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:weightSum="1">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.33"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_name"
+            android:hint="@string/register_name"
+            android:background="@color/color3.1"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editText_secondname"
+            android:hint="@string/register_secondname"
+            android:textAlignment="center"
+            android:background="@color/color3.1"
+            android:textSize="25dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09">
+
+        <RadioButton
+            android:text="@string/male_checkbox"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:id="@+id/radio_male"
+            android:onClick="radioButtonChecked"
+            android:background="@color/color3.1"/>
+
+        <RadioButton
+            android:text="@string/female_checkbox"
+            android:layout_width="62dp"
+            android:layout_height="match_parent"
+            android:id="@+id/radio_female"
+            android:onClick="radioButtonChecked"
+            android:background="@color/color3.1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/EditText_birthday"
+            android:layout_weight="2"
+            android:hint="@string/birth"
+            android:background="@color/color3.1"
+            android:textAlignment="center"
+            android:textSize="25dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_country"
+        android:layout_weight="0.14">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/spin_country"
+            android:layout_weight="1"
+            android:text="@string/country"
+            android:background="@color/color3.1"
+            android:textAlignment="center"
+            android:textSize="25dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_city"
+            android:layout_weight="1"
+            android:textSize="25dp"
+            android:hint="@string/city"
+            android:background="@color/color3.1"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="@string/button_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_next"
+            android:layout_weight="1"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/curve_background"
+            android:onClick="btn_next"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

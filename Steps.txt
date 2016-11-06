@@ -1,0 +1,40 @@
+Steps of the project
+
+* - Create the layouts
+- Start animation
+*- conect the buttons
+*- link the textViews, EditViews
+- Make RadioButton working (if male checked, female = false and oposite, Fill the profile with the respective answer. etc)
+- Sendo and Email to confirm the register
+
+
+How the app needs to work:
+
+1 - animation (logout screen in background waiting to work)
+2 - Login screen
+3 - If login send a notification (welcome to app) and go to welcome message
+4 - If register g to reister page nº1. 
+	4.1 - fill the forms. Name, second name, sex, country, city. If all is filled, press next
+	4.2 - Fill the second form. Email and password and confirm both. If equal continue. If not send a toast message ("The Email/password is diferent"). Fill the scurity question. Press enter. goes direct to welcome ew user screen.
+5 - welcome new user screen. Needs to show how the app works. All the features needs to be there. After visualize all steps, go to the first page.
+6 - First page have to have 5 buttons Which are picture, text, Video, audio capture and search. 
+	6.1 - Picture button needs to take a quick picture of the moment and post instantly. 
+	6.2 - Text button send you to the text editor. Which will ask for a picture or not. A title and the text. The fields will convert automaticaly to newspaper font all color will be black and white and the first letter will be Uppercased.
+	6.3 - Camera will be the video that you will record a video and show as a reporter on tv. So you might mix with the text part and create a complete news. 
+	6.4 - Audio will be like a radio news. You can save flash news with 1 min duration maximum to the files. 
+	6.5 - search is a simple way to find an especific new or journal. 
+
+Content - 
+1 - Picture will be displayed in a neutral layout, like a picture wall. They will be included inside a personalized page/profile. 
+2 - The text part will be displayed in black and white, like a journal. Also the content can be updated (will apear the updates from bottom to top). 
+3 - The video part will be displayed with the bottom bar. Whick will contain the propagandas, other news. Some breaking new or hot new. 
+4 - Audio will be displayed like a radio. Each 1 minute video a time. Might be a propaganda between an audio transmition. 
+
+4 - general
+	4.1 - You can mix all the news to the same new. So the page will display the text, video, audio, fast Pictures in the same part, so you can cover a new for complete. 
+	4.2 - This page will be diferent and might have to each new a complete page. Filled with the content collected. 
+	4.3 - In the main page, where will be all the pages together, the most complete news about something will be displayed together. 
+	4.4 - The button credibility will be used in all news. So you can click and make the most real and good made news showable to everybody on the first page. More credibility more chance to be on the first page.
+	4.5 - The button Like, dislike, will be displayed on the bottom of the new towards the credibility button. 
+	4.6 - The Icon FIRE will be displayed when the new is really hot and have lots of credibility clicked.
+	4.7 - 
