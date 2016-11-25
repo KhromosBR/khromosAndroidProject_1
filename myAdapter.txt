@@ -1,0 +1,40 @@
+package khromostech.khromosandroidproject_1;
+
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.Holder> {
+
+    private ArrayList<Constructor> usersProfile;
+    private Context context;
+
+    public MyAdapter(ArrayList<Constructor> usersProfile, Context context) {
+        this.usersProfile = usersProfile;
+        this.context = context;
+    }
+
+    @Override
+    public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.card_view,parent,false);
+        Holder holder = new Holder(view);
+        return holder;
+
+    @Override
+    public void onBindViewHolder(final Holder holder, int position) {
+        holder.textView.setText(Constructor.get(position).getName());
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
+}

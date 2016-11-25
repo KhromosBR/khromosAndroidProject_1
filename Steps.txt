@@ -6,6 +6,8 @@ Steps of the project
 *- link the textViews, EditViews
 - Make RadioButton working (if male checked, female = false and oposite, Fill the profile with the respective answer. etc)
 - Sendo and Email to confirm the register
+- Add Recycleview and Card
+- Database using
 
 
 How the app needs to work:

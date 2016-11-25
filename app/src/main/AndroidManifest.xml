@@ -21,9 +21,11 @@
         <!-- Starting the activities -->
         <activity android:name=".LoginActivity"/>
         <activity android:name=".RegisterActivity"/>
-        <activity android:name=".SecondRegisterActivity"/>
         <activity android:name=".WelcomeToKhromos"/>
         <activity android:name=".FirstPageActivity"/>
+        <activity android:name=".CaptureActivity"/>
+        <activity android:name=".AudioCaptureActivity"/>
+        <activity android:name=".AppContent"/>
 
     </application>
 
@@ -37,10 +39,16 @@
     <uses-feature android:name="android.permission.CAMERA"/>
 
     <!-- To storage permission -->
-
-    <uses-feature android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <!-- Audio Recording -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <!-- Location Permission -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    
+    <!-- Internet -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 
 

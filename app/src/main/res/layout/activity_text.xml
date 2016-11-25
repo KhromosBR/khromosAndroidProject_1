@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_welcome_final"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color1.1"
+        android:id="@+id/header"
+        android:weightSum="1"
+        android:elevation="2dp">
+
+        <ImageView
+            android:layout_width="296dp"
+            android:layout_height="49dp"
+            android:id="@+id/logoSkup"
+            android:src="@drawable/logo14" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_search"
+            android:background="@color/color1.1"
+            android:layout_margin="5dp"
+            android:onClick="btnSearch"
+            android:src="@android:drawable/ic_menu_search"
+            android:layout_weight="0.50" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="246dp"
+        android:layout_margin="30dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_title"
+            android:layout_weight="0.30"
+            android:background="@color/color1"
+            android:layout_marginBottom="2dp"
+            android:maxLength="40"
+            android:hint="@string/editText_title"
+            android:textColorHint="@color/color3"
+            android:paddingLeft="20dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:minLines="3"
+            android:gravity="top|left"
+            android:maxLines="6"
+            android:overScrollMode="ifContentScrolls"
+            android:ems="10"
+            android:id="@+id/editText_content"
+            android:layout_weight="0.81"
+            android:background="@color/color1"
+            android:layout_marginTop="2dp"
+            android:maxLength="200"
+            android:paddingTop="10dp"
+            android:hint="@string/editText_Content"
+            android:textColorHint="@color/color3"
+            android:paddingLeft="20dp"
+            android:selectAllOnFocus="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <Button
+            android:text="@string/button_applyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_applyText"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/circle_button"
+            android:onClick="addTextToForm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/android_app_store_"
+            android:id="@+id/imageView8" />
+    </LinearLayout>
+
+</LinearLayout>

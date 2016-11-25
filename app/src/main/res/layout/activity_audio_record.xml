@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color1.1"
+        android:id="@+id/header"
+        android:weightSum="1"
+        android:elevation="2dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/logoSkup"
+            android:src="@drawable/logo14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView5"
+            android:src="@drawable/audio_recording" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_playAudio"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_play"
+            android:onClick="buttonTapped"
+            android:background="@drawable/circle_button"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="5dp"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_startRecord"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_notification_overlay"
+            android:background="@drawable/circle_button"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_stopAudio"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_media_pause"
+            android:onClick="buttonTapped"
+            android:background="@drawable/circle_button"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

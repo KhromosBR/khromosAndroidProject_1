@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_welcome_final"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="188dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo14"
+            android:id="@+id/imageView3"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color1.1">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/email_field"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:hint="@string/email"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:background="@color/color1.1"
+            android:textAllCaps="false"
+            android:textColorHint="@color/color4"            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/confirm_email"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:hint="@string/confirm_email"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:background="@color/color1.1"
+            android:textAllCaps="false"
+            android:textColorHint="@color/color4"
+            android:textStyle="bold"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/password_field"
+            android:hint="@string/password"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="@android:color/black"
+            android:background="@color/color1.1"
+            android:textAllCaps="false"
+            android:textColorHint="@color/color4"            android:textStyle="bold"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/confirm_password"
+            android:hint="@string/confirm_password"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:background="@color/color1.1"
+            android:textAllCaps="false"
+            android:textColorHint="@color/color4"            android:textStyle="bold"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <Button
+        android:text="@string/sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:id="@+id/btn_SignIn"
+        android:background="@drawable/curve_background"
+        android:onClick="btn_ToWelcome"
+        android:layout_marginLeft="130dp"
+        android:layout_marginRight="130dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="150dp"
+        android:textSize="25dp"/>
+
+</LinearLayout>

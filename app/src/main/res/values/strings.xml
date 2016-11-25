@@ -21,6 +21,8 @@
     <string name="security_question">Security question</string>
     <string name="add_picture">Profile Picture</string>
     <string name="button_next">Next</string>
+    <string name="button_applyText">ApplyText</string>
+    <string name="button_done">Done</string>
 
     <!-- Welcome -->
     <string name="welcome">Welcome to </string>
@@ -46,5 +48,9 @@
         <item>What´s your favorite band?</item>
         <item>What´s your first car?</item>
     </string-array>
+
+    <!-- Text  -->
+    <string name="editText_title">Title</string>
+    <string name="editText_Content">Content</string>
 
 </resources>

@@ -1,96 +1,65 @@
 package khromostech.khromosandroidproject_1;
 
-import android.app.Activity;
-import android.content.Context;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.provider.MediaStore;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.AttributeSet;
+import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.lang.reflect.Array;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText name, secondName, birthday, city;
-    Spinner spinnerCountry;
-    RadioButton male, female;
+    EditText email = null, confirmEmail = null, password = null, confirmPassword = null;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actvity_register);
+        setContentView(R.layout.activity_register);
 
-        name = (EditText)findViewById(R.id.editText_name);
-        secondName = (EditText)findViewById(R.id.editText_secondname);
-        birthday = (EditText)findViewById(R.id.EditText_birthday);
-        city = (EditText)findViewById(R.id.editText_city);
-        male = (RadioButton) findViewById(R.id.radio_male);
-        female = (RadioButton) findViewById(R.id.radio_female);
-
-        /*Spinners*/
-
-        spinnerCountry = (Spinner)findViewById(R.id.spin_country);
-        ArrayAdapter<CharSequence> adapterCountry = ArrayAdapter.createFromResource(this, R.array.spin_country, android.R.layout.simple_spinner_item);
-        adapterCountry.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerCountry.setAdapter(adapterCountry);
-
+        email = (EditText)findViewById(R.id.email_field);
+        confirmEmail = (EditText) findViewById(R.id.confirm_email);
+        password = (EditText) findViewById(R.id.password_field);
+        confirmPassword = (EditText)findViewById(R.id.confirm_password);
     }
 
-    public class SpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
+    public void btn_ToWelcome(View view){
 
-        public void onItemSelected(AdapterView<?> parent, View view,
-                                   int pos, long id) {
+        String compareEmail = email.getText().toString();
+        String copareConfEmail = confirmEmail.getText().toString();
+        String comparePassword = password.getText().toString();
+        String compareConfPassword = confirmPassword.getText().toString();
 
-             parent.getItemAtPosition(pos);
-        }
+        if (email.getText().toString().equals("") || confirmEmail.getText().toString().equals("") || password.getText().toString().equals("") || confirmPassword.getText().toString().equals("")) {
+            Toast.makeText(this, "Did you forget something dude? Try again!", Toast.LENGTH_SHORT).show();
+        }else if (compareEmail.equals(copareConfEmail) && comparePassword.equals(compareConfPassword)){
+            Intent intent = new Intent(this, WelcomeToKhromos.class);
 
-        public void onNothingSelected(AdapterView<?> parent) {
-            // Another interface callback
-        }
-    }
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
 
-    public void addProfilePicture(View view){
-        //TODO Second Part
-    }
+            Notification notification = new NotificationCompat.Builder(this)
+                    .setContentText("You´re Logged in! Enjoy, reporter!")
+                    .setContentTitle("Welcome to Khromos!!")
+                    .setSmallIcon(R.mipmap.ic_launcher)
+                    .setContentIntent(pendingIntent)
+                    .build();
 
-    public void btn_next(View view){
+            NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            manager.notify(0, notification);
 
-            Intent intent = new Intent(this, SecondRegisterActivity.class);
-            Log.d("Error", "Error: ");
             startActivity(intent);
-    }
-
-    public void radioButtonChecked(View view){
-
-
-        boolean checked = ((RadioButton) view).isChecked();
-
-        switch (view.getId()){
-
-            case R.id.radio_male:
-                if (checked){
-
-                }
-            break;
-
-            case R.id.radio_female:
-                if (checked){
-
-                }
-            break;
+            Log.d("ButtonClick", "Click Welcome");
+        }else{
+            Toast.makeText(this, "Your email diferent is, fill to again you have to!", Toast.LENGTH_SHORT).show();
         }
     }
 
 }
+
+

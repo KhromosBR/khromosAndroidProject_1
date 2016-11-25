@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/gradient_background"
+    android:background="@drawable/background_welcomel_land"
     tools:context="khromostech.khromosandroidproject_1.MainActivity"
     android:orientation="vertical"
     android:weightSum="1">
@@ -20,31 +20,11 @@
         android:layout_width="match_parent"
         android:layout_height="257dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/textView_Welcome"
-            android:text="@string/welcome"
-            android:textSize="36sp"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textStyle="bold"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1" />
-
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/logo14"
+            android:layout_height="360dp"
             android:id="@+id/imageView"
-            android:layout_below="@+id/textView_Welcome"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_above="@+id/btn_enter"
-            android:layout_weight="1" />
+            android:src="@drawable/logo14" />
 
     </LinearLayout>
 

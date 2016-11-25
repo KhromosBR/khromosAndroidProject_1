@@ -6,10 +6,12 @@
     <color name="mainBackground">#72cf7d</color>
     <color name="backgroundWelcome">#b3e6e6e6</color>
     <color name="buttonStartGradient">#bcbcbc</color>
-    <color name="buttonEndGradient">#59b4b4b4</color>
+    <color name="buttonEndGradient">#6c6c6c</color>
 
     <color name="color0">#2196f3</color>
     <color name="color1">#e3f2fd</color>
+    <color name="color1.2">#f0e3f2fd</color>
+    <color name="color1.1">#c0e3f2fd</color>
     <color name="color2">#bbdefb</color>
     <color name="color3">#90caf9</color>
     <color name="color3.1">#44eeeeee</color>
