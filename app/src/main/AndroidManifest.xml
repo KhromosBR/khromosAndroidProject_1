@@ -26,6 +26,7 @@
         <activity android:name=".CaptureActivity"/>
         <activity android:name=".AudioCaptureActivity"/>
         <activity android:name=".AppContent"/>
+        <activity android:name=".TextEditActivity"/>
 
     </application>
 

@@ -41,13 +41,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         public TextView title;
         public ImageView image_news;
         public Context context;
-        private CardView cardviewFirstPage;
+//        private CardView cardviewFirstPage;
 
 
         public MyViewHolder(View itemView) {
             super(itemView);
-
-            cardviewFirstPage = (CardView) itemView.findViewById(R.id.cardView_firstPage);
+//            cardviewFirstPage = (CardView) itemView.findViewById(R.id.cardView_firstPage);
             title = (TextView) itemView.findViewById(R.id.title_news);
             image_news = (ImageView) itemView.findViewById(R.id.image_news);
         }
@@ -60,6 +59,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
         return new MyViewHolder(itemView);
     }
+
+
 
     @Override
     public void onBindViewHolder(MyAdapter.MyViewHolder holder, int position) {

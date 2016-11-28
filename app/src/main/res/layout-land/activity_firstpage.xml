@@ -22,7 +22,7 @@
             android:id="@+id/btn_addMedia"
             android:layout_weight="1"
             android:background="@color/color1.1"
-            android:onClick="toAppContent"
+            android:onClick="buttonAddMedia"
             android:src="@android:drawable/ic_menu_add" />
 
         <ImageView

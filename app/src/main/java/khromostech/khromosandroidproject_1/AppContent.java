@@ -40,10 +40,7 @@ public class AppContent extends AppCompatActivity {
 
 
 
-    public void toAppContent(View view){
-        Intent intent = new Intent(this, AppContent.class);
-        startActivity(intent);
-    }
+
 
 
 }

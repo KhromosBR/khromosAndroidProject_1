@@ -22,7 +22,7 @@
             android:layout_weight="0.36"
             android:background="@color/color1.1"
             android:src="@android:drawable/ic_menu_add"
-            android:onClick="toAppContent" />
+            android:onClick="buttonAddMedia" />
 
         <ImageView
             android:layout_width="208dp"

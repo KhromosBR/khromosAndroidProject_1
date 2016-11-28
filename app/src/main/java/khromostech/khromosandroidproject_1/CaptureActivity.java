@@ -28,10 +28,6 @@ public class CaptureActivity extends AppCompatActivity {
         public static final int REQUEST_CODE_IMAGE = 100;
         public static final int REQUEST_CODE_VIDEO = 200;
 
-        private int havePicture = 0, haveVideo = 0, haveAudio = 0, haveText = 0;
-
-        Intent intent;
-
         ImageView imageFromCamera;
         //VideoView videoFromCamera;
         Uri fileUri;
@@ -41,8 +37,6 @@ public class CaptureActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_media_capure);
             imageFromCamera = (ImageView)findViewById(R.id.image_capture);
-
-            intent = new Intent();
         }
 
         private boolean isIntentSafe(Intent cameraIntent) {
@@ -66,7 +60,6 @@ public class CaptureActivity extends AppCompatActivity {
             if(isIntentSafe(cameraIntent))
             {
                 startActivityForResult(cameraIntent,REQUEST_CODE_IMAGE);
-                havePicture = 1;
             }
             else
             {
@@ -76,14 +69,13 @@ public class CaptureActivity extends AppCompatActivity {
 
         public void takeAVideo(View view)
         {
+            Toast.makeText(this, "coming soon", Toast.LENGTH_SHORT).show();
             Intent cameraIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
             fileUri = getOutputMediaFileUri(MEDIA_TYPE_VIDEO);
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
             if(isIntentSafe(cameraIntent))
             {
                 startActivityForResult(cameraIntent, REQUEST_CODE_VIDEO);
-                haveAudio = 1;
-
             }
             else
             {
@@ -95,16 +87,15 @@ public class CaptureActivity extends AppCompatActivity {
         public void takeAudio(View view){
 
             Intent intent = new Intent(this, AudioCaptureActivity.class);
-            Toast.makeText(this, "Audio capture", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "coming soon", Toast.LENGTH_SHORT).show();
             startActivity(intent);
-            haveAudio = 1;
-
         }
 
         public void takeText(View view){
             Intent intent = new Intent (this, TextEditActivity.class);
+            Log.d("#OPPENTEXT", "Text opened");
+            Toast.makeText(this, "coming soon", Toast.LENGTH_SHORT).show();
             startActivity(intent);
-            haveText = 1;
         }
 
 
@@ -113,15 +104,11 @@ public class CaptureActivity extends AppCompatActivity {
             super.onActivityResult(requestCode, resultCode, data);
             Log.d("ACTIVITY_RESULT",requestCode + " "+resultCode);
             if(requestCode == REQUEST_CODE_IMAGE && resultCode==RESULT_OK /*&& data != null*/) {
-//                Bundle bundle = data.getExtras();
-//                Bitmap bitmap = (Bitmap) bundle.get("data");
 
-//                imageFromCamera.setImageBitmap(bitmap);
                 imageFromCamera.setImageURI(fileUri);
-                Toast.makeText(this,"Image saved to:\n"+fileUri,Toast.LENGTH_SHORT).show();
-                Button button = (Button) findViewById(R.id.btnDone);
+//                Toast.makeText(this,"Image saved to:\n"+fileUri,Toast.LENGTH_SHORT).show();
 
-                button.setVisibility(View.VISIBLE);
+//                button.setVisibility(View.VISIBLE);
             }
             else if(requestCode == REQUEST_CODE_VIDEO && resultCode==RESULT_OK && data != null)
             {
@@ -134,11 +121,11 @@ public class CaptureActivity extends AppCompatActivity {
         }
 
     public void done(View view){
-
+        Intent intent = new Intent();
         intent.putExtra("imageUri", fileUri);
         Log.d("#IMAGE", "done: "+fileUri);
 
-        this.setResult(RESULT_OK, intent);
+        setResult(RESULT_OK, intent);
         finish();
     }
 

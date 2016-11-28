@@ -33,26 +33,25 @@ public class FirstPageActivity extends Activity {
 
 
     public RecyclerView recyclerView;
-        public  MyAdapter adapter;
-        public ArrayList<Constructor_media> mediaList;
+    public MyAdapter adapter;
+    public ArrayList<Constructor_media> mediaList;
+    public LinearLayout buttons, header;
+    public ImageButton btnSearch, btnAddMedia;
+    private TextView title;
+    private String text;
 
-        public LinearLayout buttons, header;
 
-        public ImageButton btnSearch, btnAddMedia;
 
-        @Override
+    @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_firstpage);
 
-//            buttons = (LinearLayout) findViewById(R.id.buttons);
-//            header = (LinearLayout) findViewById(R.id.header);
-
             btnSearch = (ImageButton) findViewById(R.id.btn_search);
             btnAddMedia = (ImageButton) findViewById(R.id.btn_addMedia);
+            title = (TextView) findViewById(R.id.title_news);
 
             recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-//            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
             RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 3);
 
             mediaList = new ArrayList<>();
@@ -61,14 +60,7 @@ public class FirstPageActivity extends Activity {
             recyclerView.setLayoutManager(mLayoutManager);
             recyclerView.setItemAnimator(new DefaultItemAnimator());
             recyclerView.setAdapter(adapter);
-
-            Bundle extras = getIntent().getExtras();
-            Serializable captureActivity = null;
-            if (extras != null && extras.containsKey("send media")) {
-                captureActivity = extras.getSerializable("usuario");
-            }
         }
-
 
     public void buttonAddMedia(View view){
         Intent intent = new Intent(this, CaptureActivity.class);
@@ -79,14 +71,17 @@ public class FirstPageActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         //when is success capture
-        if (requestCode == 999 && resultCode == RESULT_OK && data != null){
+//        Bundle extras = getIntent().getExtras();
+//        text = extras.getString("Title");
+//        title.setText(text);
+
+        if (requestCode == 999 && resultCode == RESULT_OK){
 
             Log.d("#IMAGE", "done: 2 "+data.getExtras().get("imageUri"));
             Log.d("#IMAGE", "done: 3 "+Uri.parse(data.getExtras().get("imageUri").toString()));
 
             mediaList.add(new Constructor_media(data.getExtras().get("imageUri").toString(), null, null, null));
             adapter.notifyDataSetChanged();
-
         }
     }
 }
